@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" font-family="Arial" font-size="12">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#000" />
+    </marker>
+  </defs>
+
+  <!-- skills table -->
+  <rect x="40" y="40" width="220" height="180" fill="#fff" stroke="#000" />
+  <text x="150" y="60" text-anchor="middle" font-weight="bold">skills</text>
+  <text x="50" y="80">id</text>
+  <text x="50" y="95">slug</text>
+  <text x="50" y="110">name</text>
+  <text x="50" y="125">description</text>
+  <text x="50" y="140">type</text>
+  <text x="50" y="155">level_scale</text>
+  <text x="50" y="170">parent_id</text>
+  <text x="50" y="185">timestamps</text>
+
+  <!-- skill_aliases table -->
+  <rect x="360" y="40" width="220" height="160" fill="#fff" stroke="#000" />
+  <text x="470" y="60" text-anchor="middle" font-weight="bold">skill_aliases</text>
+  <text x="370" y="80">id</text>
+  <text x="370" y="95">skill_id</text>
+  <text x="370" y="110">alias</text>
+  <text x="370" y="125">timestamps</text>
+
+  <!-- skill_prerequisites table -->
+  <rect x="680" y="40" width="260" height="130" fill="#fff" stroke="#000" />
+  <text x="810" y="60" text-anchor="middle" font-weight="bold">skill_prerequisites</text>
+  <text x="690" y="80">skill_id</text>
+  <text x="690" y="95">prerequisite_skill_id</text>
+
+  <!-- roles table -->
+  <rect x="40" y="320" width="220" height="180" fill="#fff" stroke="#000" />
+  <text x="150" y="340" text-anchor="middle" font-weight="bold">roles</text>
+  <text x="50" y="360">id</text>
+  <text x="50" y="375">slug</text>
+  <text x="50" y="390">title</text>
+  <text x="50" y="405">family</text>
+  <text x="50" y="420">seniority</text>
+  <text x="50" y="435">description</text>
+  <text x="50" y="450">timestamps</text>
+
+  <!-- role_skills table -->
+  <rect x="360" y="320" width="260" height="190" fill="#fff" stroke="#000" />
+  <text x="490" y="340" text-anchor="middle" font-weight="bold">role_skills</text>
+  <text x="370" y="360">role_id</text>
+  <text x="370" y="375">skill_id</text>
+  <text x="370" y="390">required_level</text>
+  <text x="370" y="405">weight</text>
+  <text x="370" y="420">is_required</text>
+
+  <!-- progressions table -->
+  <rect x="680" y="320" width="260" height="160" fill="#fff" stroke="#000" />
+  <text x="810" y="340" text-anchor="middle" font-weight="bold">progressions</text>
+  <text x="690" y="360">from_role_id</text>
+  <text x="690" y="375">to_role_id</text>
+  <text x="690" y="390">rationale</text>
+  <text x="690" y="405">min_score_to_progress</text>
+
+  <!-- relationships -->
+  <line x1="360" y1="100" x2="260" y2="100" stroke="#000" marker-end="url(#arrow)" />
+  <line x1="680" y1="80" x2="260" y2="80" stroke="#000" marker-end="url(#arrow)" />
+  <line x1="680" y1="95" x2="260" y2="95" stroke="#000" marker-end="url(#arrow)" />
+  <line x1="360" y1="360" x2="260" y2="360" stroke="#000" marker-end="url(#arrow)" />
+  <line x1="360" y1="375" x2="260" y2="110" stroke="#000" marker-end="url(#arrow)" />
+  <line x1="680" y1="360" x2="260" y2="360" stroke="#000" marker-end="url(#arrow)" />
+  <line x1="680" y1="375" x2="260" y2="360" stroke="#000" marker-end="url(#arrow)" />
+</svg>
