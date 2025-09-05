@@ -1,0 +1,11 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Software Engineer I",
+      "slug": "se-1",
+      "family": "Engineering",
+      "seniority": "junior"
+    }
+  ]
+}

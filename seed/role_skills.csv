@@ -1,0 +1,2 @@
+role_slug,skill_slug,required_level,weight,is_required
+se-1,example-skill,1,1.0,true

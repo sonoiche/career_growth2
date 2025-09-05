@@ -11,6 +11,7 @@ This service is designed to run **locally/offline** with no third-party credenti
 
 ## First-time Setup
 
+```bash
 composer install
 cp .env.example .env
 php artisan key:generate
@@ -21,6 +22,7 @@ php artisan migrate
 # Seed reference data & taxonomy
 php artisan db:seed
 # Or: php artisan import:taxonomy --from=./seed
+```
 
 ## Health & Version
 - GET /api/health → returns 200 ok or 503 degraded, checks db+cache

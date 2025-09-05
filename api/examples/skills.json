@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Example Skill",
+      "slug": "example-skill",
+      "type": "technical"
+    }
+  ]
+}

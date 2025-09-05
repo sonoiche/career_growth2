@@ -6,7 +6,7 @@
 - Composer: 2.7+
 - DB: MySQL 8.0+ (MariaDB 10.6+ acceptable)
 - Cache: Redis 7 (preferred; file cache fallback works)
-- OS/Runtime: macOS/Linux or Docker (optional docker-compose.yml)
+- OS/Runtime: macOS/Linux or Docker
 
 No third-party credentials are required. Everything runs locally/offline.
 
@@ -14,7 +14,7 @@ No third-party credentials are required. Everything runs locally/offline.
 ## Quickstart
 
 ```bash
-cd cereer_growth
+cd career_growth2
 php artisan migrate
 composer require league/csv --dev
 php artisan db:seed
@@ -236,24 +236,26 @@ foreach ($csv->getRecords() as $row) {
 
 ## Repository Layout
 
-/api/
+```text
+api/
   openapi.yaml
   examples/
   postman_collection.json
-/app/
-  Console/Commands/ImportTaxonomy.php
-  Domain/Skills/{AliasResolver.php,PrerequisiteValidator.php,SkillHierarchy.php}
+app/
+  Domain/Skills/{AliasResolver.php,PrerequisiteValidator.php}
   Http/{Controllers,Middleware,Requests,Resources}
-  Models/{Role.php,RoleSkill.php,Skill.php,SkillAlias.php,SkillPrerequisite.php,Progression.php}
-  Policies/
-/config/
-/database/{factories,migrations,seeders}
-/docs/{erd.mmd,erd.png,deploy.md,skills-mapping.md,governance.md,data-quality.md}
-/resources/...
-/seed/{skills.csv,skills.json,roles.csv,role_skills.csv,progressions.csv,skill_aliases.csv}
-/tests/{Feature,Unit}
-/.github/workflows/ci.yml
-/README.md
+  Models/{Role.php,RoleSkill.php,Skill.php,SkillAlias.php,Progression.php}
+  Providers/
+  Support/CsvBool.php
+config/
+database/{migrations,seeders}
+docs/{deploy.md,skills-mapping.md,governance.md,data-quality.md}
+routes/
+seed/{skills.csv,skills.json,roles.csv,role_skills.csv,progressions.csv,skill_aliases.csv}
+tests/{Feature,Unit}
+composer.json
+README.md
+```
 
 ## Endpoints
 
