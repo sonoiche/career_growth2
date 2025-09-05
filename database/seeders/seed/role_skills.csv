@@ -1,0 +1,8 @@
+role_slug,skill_slug,required_level,weight,is_required
+frontend-engineer,javascript,3,1,true
+frontend-engineer,react,3,1,true
+frontend-engineer,css,3,0.8,true
+senior-frontend-engineer,javascript,4,1,true
+senior-frontend-engineer,react,4,1,true
+senior-frontend-engineer,system-design,3,1,true
+senior-frontend-engineer,communication,3,0.7,true

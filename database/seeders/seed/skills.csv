@@ -1,0 +1,6 @@
+slug,name,description,type,level_scale,parent_slug
+javascript,JavaScript,Language for the web,technical,5,
+react,React,UI library,technical,5,javascript
+css,CSS,Styling,technical,5,
+system-design,System Design,High-level design,technical,5,
+communication,Communication,Soft skills,soft,5,

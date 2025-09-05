@@ -1,0 +1,40 @@
+openapi: 3.1.0
+info:
+  title: Skills Taxonomy & Role Mapping API
+  version: "1.0.0"
+paths:
+  /skills:
+    get:
+      summary: List skills
+      parameters:
+        - in: query; name: parent_id; schema: { type: integer }
+        - in: query; name: type; schema: { type: string }
+        - in: query; name: q; schema: { type: string }
+        - in: query; name: page; schema: { type: integer }
+        - in: query; name: per_page; schema: { type: integer }
+      responses:
+        "200":
+          description: OK
+  /skills/{id}:
+    get:
+      summary: Show skill
+      parameters: [{ in: path, name: id, required: true, schema: { type: integer } }]
+      responses: { "200": { description: OK } }
+  /roles:
+    get:
+      summary: List roles
+      parameters:
+        - in: query; name: family; schema: { type: string }
+        - in: query; name: seniority; schema: { type: string }
+        - in: query; name: q; schema: { type: string }
+      responses: { "200": { description: OK } }
+  /roles/{id}:
+    get:
+      summary: Show role
+      parameters: [{ in: path, name: id, required: true, schema: { type: integer } }]
+      responses: { "200": { description: OK } }
+  /roles/{id}/skills:
+    get:
+      summary: List a role's skills with requirements
+      parameters: [{ in: path, name: id, required: true, schema: { type: integer } }]
+      responses: { "200": { description: OK } }
