@@ -1,0 +1,60 @@
+erDiagram
+    skills {
+        bigint id PK
+        string slug UK
+        string name
+        text description
+        string type
+        tinyint level_scale
+        bigint parent_id FK
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    skill_prerequisites {
+        bigint skill_id PK,FK
+        bigint prerequisite_skill_id PK,FK
+    }
+
+    skill_aliases {
+        bigint id PK
+        bigint skill_id FK
+        string alias
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    roles {
+        bigint id PK
+        string slug UK
+        string title
+        string family
+        string seniority
+        text description
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    role_skills {
+        bigint role_id PK,FK
+        bigint skill_id PK,FK
+        tinyint required_level
+        decimal weight
+        boolean is_required
+    }
+
+    progressions {
+        bigint from_role_id PK,FK
+        bigint to_role_id PK,FK
+        text rationale
+        decimal min_score_to_progress
+    }
+
+    skills ||--o{ skills : "parent"
+    skills ||--o{ skill_prerequisites : "has"
+    skill_prerequisites }o--|| skills : "prerequisite"
+    skills ||--o{ skill_aliases : "aliases"
+    roles ||--o{ role_skills : "requires"
+    role_skills }o--|| skills : "skill"
+    roles ||--o{ progressions : "from"
+    progressions }o--|| roles : "to"
