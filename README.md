@@ -237,24 +237,54 @@ foreach ($csv->getRecords() as $row) {
 ## Repository Layout
 
 ```text
-api/
-  openapi.yaml
-  examples/
-  postman_collection.json
-app/
-  Domain/Skills/{AliasResolver.php,PrerequisiteValidator.php}
-  Http/{Controllers,Middleware,Requests,Resources}
-  Models/{Role.php,RoleSkill.php,Skill.php,SkillAlias.php,Progression.php}
-  Providers/
-  Support/CsvBool.php
-config/
-database/{migrations,seeders}
-docs/{deploy.md,skills-mapping.md,governance.md,data-quality.md}
-routes/
-seed/{skills.csv,skills.json,roles.csv,role_skills.csv,progressions.csv,skill_aliases.csv}
-tests/{Feature,Unit}
-composer.json
-README.md
+.
+├── README.md
+├── api/
+│   ├── examples/
+│   ├── openapi.yaml
+│   └── postman_collection.json
+├── app/
+│   ├── Domain/
+│   │   └── Skills/
+│   │       ├── AliasResolver.php
+│   │       └── PrerequisiteValidator.php
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   ├── Requests/
+│   │   └── Resources/
+│   ├── Models/
+│   │   ├── Progression.php
+│   │   ├── Role.php
+│   │   ├── RoleSkill.php
+│   │   ├── Skill.php
+│   │   └── SkillAlias.php
+│   ├── Providers/
+│   └── Support/
+│       └── CsvBool.php
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── docs/
+│   ├── data-quality.md
+│   ├── deploy.md
+│   ├── erd.mmd
+│   ├── erd.svg
+│   ├── governance.md
+│   └── skills-mapping.md
+├── routes/
+├── seed/
+│   ├── progressions.csv
+│   ├── role_skills.csv
+│   ├── roles.csv
+│   ├── skill_aliases.csv
+│   ├── skills.csv
+│   └── skills.json
+├── tests/
+│   ├── Feature/
+│   └── Unit/
+└── composer.json
 ```
 
 ## Endpoints
